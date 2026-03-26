@@ -34,7 +34,6 @@ export default function Footer() {
           {[
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kavita-kumawat-1718b5225/" },
             { icon: <FaGithub />, link: "https://github.com/Kavita-1234" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/_kavita_kumawat716358" },
           ].map((item, i) => (
             <a
               key={i}
