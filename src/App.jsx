@@ -9,16 +9,16 @@ import TimeLine from "../src/pages/Time-Line"
 import Footer from "../src/components/Footer"
 import Fullstack from "../src/pages/Fullstack"
 // import Roadmap from "../src/pages/Roadmap"
-import Certificates from '../src/pages/Certificates'
+// import Certificates from '../src/pages/Certificates'
 import Slider from "../src/pages/Slider"
 
 export default function App() {
   return (
-    <div>
+    <div className='flex flex-col'>
         <Navbar />
         <Hero />
         <About />
-        <Certificates />
+        {/* <Certificates /> */}
         <TimeLine />
         <Fullstack />
         {/* <Roadmap /> */}

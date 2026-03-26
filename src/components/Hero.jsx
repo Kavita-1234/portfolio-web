@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../assets/hero.jpg";
+import hero from "../assets/image/profileimg.jpg";
 
 export default function Hero() {
   return (
@@ -12,20 +12,21 @@ export default function Hero() {
       <div className="max-w-xl mt-10 md:mt-0">
         <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
-            Devanshu Mathur
+            Kavita Kumawat
           </span>
         </h2>
 
         <p className="text-xl mt-4 font-semibold text-gray-200">
           I'm a{" "}
           <span className="text-purple-400 animate-pulse">
-            Full-Stack Developer
+            Java Back-end Developer
           </span>
         </p>
 
         <p className="text-gray-300 mt-5 leading-relaxed text-lg">
-          🚀 I build fast, responsive & visually modern web experiences with clean
-          code, strong UI/UX, and real-world functionality.
+          🚀 Building scalable, secure, and high-performance backend systems 
+          using Java and Spring Boot, creating robust APIs.
+
         </p>
 
         {/* BUTTONS */}
@@ -45,7 +46,7 @@ export default function Hero() {
 
       {/* RIGHT IMAGE */}
       <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-[4px] border-purple-600 shadow-[0_0_40px_#a400ff] ring-offset-2 hover:scale-105 transition">
-        <img src={hero} alt="profile" className="w-full h-full object-cover" />
+        <img src={hero} alt="profile" className="w-full h-full object-cover object-top" />
       </div>
     </section>
   );

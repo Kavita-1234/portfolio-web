@@ -14,27 +14,27 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <div className="w-14 h-14 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black flex items-center justify-center font-bold text-2xl shadow-lg">
-            D
+            K
           </div>
         </div>
 
         {/* Name */}
         <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-          Devanshu Mathur
+          Kavita Kumawat
         </h1>
 
         {/* Tagline */}
         <p className="text-gray-400 max-w-2xl mx-auto mt-4 leading-relaxed">
-          Full Stack Developer | Frontend Specialist | UI/UX Focused  
+          Java Back-end Developer | Frontend Specialist | UI/UX Focused  
           <br />I build modern, premium digital experiences.
         </p>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-5 mt-8">
           {[
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/devanshu-mathur-474879241" },
-            { icon: <FaGithub />, link: "https://github.com/devanshumathur22" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/devanshumathur22" },
+            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kavita-kumawat-1718b5225/" },
+            { icon: <FaGithub />, link: "https://github.com/Kavita-1234" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/_kavita_kumawat716358" },
           ].map((item, i) => (
             <a
               key={i}
@@ -51,15 +51,15 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="flex justify-center gap-6 mt-8 text-sm text-gray-400 flex-wrap">
-          <p className="flex items-center gap-2"><FaEnvelope /> devanshumathur9@gmail.com</p>
-          <p className="flex items-center gap-2"><FaPhone /> +91 9876544488</p>
+          <p className="flex items-center gap-2"><FaEnvelope /> kumawatkavita375@gmail.com</p>
+          <p className="flex items-center gap-2"><FaPhone /> +91 9950991882</p>
           <p className="flex items-center gap-2"><FaLocationDot /> Jaipur, Rajasthan</p>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Devanshu Mathur — All Rights Reserved.
+        © {new Date().getFullYear()} Kavita Kumawat — All Rights Reserved.
       </div>
     </footer>
   );

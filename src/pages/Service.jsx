@@ -8,7 +8,7 @@ export default function Service() {
       <div className="w-36 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 
       <p className="text-gray-300 mt-6 max-w-2xl mx-auto text-center leading-relaxed">
-        I create clean, modern and high-performance digital experiences—from UI design to full responsive development, ensuring your brand looks professional online.
+        I deliver efficient and scalable backend services using Java, Spring Boot, and databases, focusing on performance, security, and seamless system integration.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
@@ -16,17 +16,17 @@ export default function Service() {
         {/* Web Development */}
         <div className="p-8 bg-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700 shadow-[0_0_25px_#1f1f1f] hover:shadow-[0_0_45px_#6a00ff] hover:scale-105 transition duration-300">
           <FaLaptopCode className="text-5xl text-purple-500 mb-4" />
-          <h3 className="text-2xl font-semibold mb-2">Web Development</h3>
+          <h3 className="text-2xl font-semibold mb-2">Backend Development</h3>
           <p className="text-gray-300 leading-relaxed">
-            I build fast, responsive and SEO-friendly websites using modern frameworks and clean code that works across all devices.
+            I build secure, scalable, and high-performance backend systems using Java and modern frameworks to power reliable web applications.
           </p>
 
           {/* Tech Pills */}
           <div className="flex gap-3 mt-5 flex-wrap">
             {[
-              { tech: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-              { tech: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-              { tech: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+              { tech: "Java", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+              { tech: "Spring Boot", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+              { tech: "REST APIs", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
             ].map((item, i) => (
               <a
                 key={i}
@@ -53,7 +53,7 @@ export default function Service() {
             {[
               { tech: "React", link: "https://reactjs.org" },
               { tech: "Tailwind", link: "https://tailwindcss.com" },
-              { tech: "Figma", link: "https://www.figma.com/" },
+              
             ].map((item, i) => (
               <a
                 key={i}

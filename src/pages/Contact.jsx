@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaPaperPlane } from "react-icons/fa";
+import {sendEmail} from "../EmailApi";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaBitbucket, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -21,12 +22,12 @@ export default function Contact() {
           <div className="p-6 bg-gray-900/60 rounded-2xl border border-gray-700 shadow-[0px_0px_25px_#1f1f1f] backdrop-blur-xl">
             <div className="flex items-center gap-4 mb-4">
               <FaEnvelope className="text-2xl text-yellow-500" />
-              <p className="text-lg font-light">devanshumathur9@gmail.com</p>
+              <p className="text-lg font-light">kumawatkavita375@gmail.com</p>
             </div>
 
             <div className="flex items-center gap-4 mb-4">
               <FaPhoneAlt className="text-2xl text-green-400" />
-              <p className="text-lg font-light">+91 9876544488</p>
+              <p className="text-lg font-light">+91 9950991882</p>
             </div>
 
             <div className="flex items-center gap-4">
@@ -46,15 +47,20 @@ export default function Contact() {
 
           {/* Social Icons */}
           <div className="flex gap-6 mt-4 text-3xl">
-            <a href="https://www.linkedin.com/in/devanshu-mathur-474879241/"
+            <a href="https://www.linkedin.com/in/kavita-kumawat-1718b5225/"
               target="_blank"
               className="text-blue-500 hover:scale-125 hover:-rotate-6 transition duration-300">
               <FaLinkedin />
             </a>
-            <a href="https://github.com/devanshumathur22"
+            <a href="https://github.com/Kavita-1234"
               target="_blank"
               className="text-gray-300 hover:scale-125 hover:-rotate-6 transition duration-300">
               <FaGithub />
+            </a>
+            <a href="https://bitbucket.org/kavita-workspace/workspace/overview/"
+              target="_blank"
+              className="text-gray-300 hover:scale-125 hover:-rotate-6 transition duration-300">
+              <FaBitbucket />
             </a>
             <a href="https://twitter.com"
               target="_blank"
@@ -79,23 +85,15 @@ export default function Contact() {
               const formData = { name, email, subject, message };
 
               try {
-                const res = await fetch("http://localhost:5170/contact", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(formData),
-                });
-
-                if (res.ok) {
-                  alert("Message sent successfully 😊");
-                  setName("");
-                  setEmail("");
-                  setSubject("");
-                  setMessage("");
-                } else {
-                  alert("Failed to send ❌");
-                }
+                await sendEmail(formData);
+                alert("Message sent successfully 😊");
+                 
+                setName("");
+                setEmail("");
+                setSubject("");
+                setMessage("");
               } catch (error) {
-                alert("Something went wrong!");
+                alert("Failed to send ❌");
               }
             }}
           >

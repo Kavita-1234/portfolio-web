@@ -8,7 +8,7 @@ import petworld from "../assets/image/petworld.jpg"
 import aluminum from "../assets/image/aluminum.jpg"
 import event from "../assets/image/events.jpg"
 import coffee from "../assets/image/coffee.jpg"
-import portfolio from "../assets/image/portfolio.png"
+import portfolio from "../assets/image/portfolioimg.png"
 
 const slides = [
   {

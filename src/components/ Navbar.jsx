@@ -19,7 +19,7 @@ export default function Navbar() {
         text-2xl font-semibold tracking-wide 
         bg-gradient-to-r from-[#8f86ff] to-[#d08fff] bg-clip-text text-transparent
       ">
-        Devanshu Mathur
+        Kavita Kumawat
       </h1>
 
       {/* Desktop Menu */}
@@ -29,7 +29,7 @@ export default function Navbar() {
           { name: "About", link: "#about" },
           { name: "Certificates", link: "#certificates" },
           { name: "Services", link: "#services" },
-          { name: "Fullstack", link: "#fullstack" },
+          { name: "Backend", link: "#fullstack" },
           { name: "How I Work", link: "#how-i-work" },
           { name: "Contact", link: "#contact-me" },
         ].map((item, i) => (
@@ -79,7 +79,7 @@ export default function Navbar() {
             { name: "About", link: "#about" },
             { name: "Certificates", link: "#certificates" },
             { name: "Services", link: "#services" },
-            { name: "Fullstack", link: "#fullstack" },
+            { name: "Backend", link: "#fullstack" },
             { name: "How I Work", link: "#how-i-work" },
             { name: "Contact", link: "#contact-me" },
           ].map((item, i) => (
