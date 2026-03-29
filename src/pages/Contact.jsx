@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {sendEmail} from "../EmailApi";
+import { sendEmailApi } from "../EmailApi";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaBitbucket, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
@@ -7,6 +7,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [image, setImage] = useState(null);
 
   return (
     <section id="contact-me" className="px-10 py-20 bg-black text-white ">
@@ -14,7 +15,7 @@ export default function Contact() {
       <div className="w-32 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 
       <div className="mt-16 max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-        
+
         {/* LEFT PANEL - CONTACT INFO */}
         <div className="flex-1 space-y-6">
 
@@ -40,9 +41,9 @@ export default function Contact() {
           <iframe
             className="w-full h-52 rounded-2xl border border-gray-700 shadow-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.548397164665!2d75.78727057519544!3d26.912433776664556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3d7f3dfd4b7%3A0x7c9b32b1e5b9d9c!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1732119828291!5m2!1sen!2sin"
-  
+
             loading="lazy"
-            
+
           ></iframe>
 
           {/* Social Icons */}
@@ -85,14 +86,19 @@ export default function Contact() {
               const formData = { name, email, subject, message };
 
               try {
-                await sendEmail(formData);
+                // ✅ correct API call
+                await sendEmailApi(formData, image);
+
                 alert("Message sent successfully 😊");
-                 
+
                 setName("");
                 setEmail("");
                 setSubject("");
                 setMessage("");
+                setImage(null);
+
               } catch (error) {
+                console.error(error);
                 alert("Failed to send ❌");
               }
             }}
@@ -132,6 +138,14 @@ export default function Contact() {
               className="p-3 rounded-xl bg-gray-900 border border-gray-700 text-white focus:ring-2 focus:ring-purple-500 outline-none transition"
               required
             ></textarea>
+
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setImage(e.target.files[0])}
+              className="p-3 rounded-xl bg-gray-900 border border-gray-700 text-white"
+            />
+
 
             <button
               type="submit"
