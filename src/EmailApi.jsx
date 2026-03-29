@@ -1,19 +1,30 @@
-export const sendEmail = async (formData) => {
-  try {
-    const response = await fetch("http://localhost:8080/send-mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+import axios from "axios";
 
-    if (!response.ok) {
-      throw new Error("Failed to send email");
+const BASE_URL = "http://localhost:8080/send-email";
+
+// ✅ API function
+export const sendEmailApi = async (formData, file) => {
+  try {
+    const data = new FormData();
+
+    // JSON data
+    data.append("data", JSON.stringify(formData));
+
+    // file
+    if (file) {
+      data.append("image", file);
     }
 
-    return await response.text();
+    const response = await axios.post(BASE_URL, data, {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    });
+
+    return response.data;
+
   } catch (error) {
+    console.error("API Error:", error);
     throw error;
   }
 };
